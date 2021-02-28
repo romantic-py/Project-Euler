@@ -13,8 +13,7 @@ for n in range(2, root + 1):
 
 largest_prime_factor = 1
 for prime in primes_till_root:
-    mod = number % prime
-    if mod == 0:
+    if number % prime == 0:
         largest_prime_factor = max(largest_prime_factor, prime)
     while number % prime == 0:
         number //= prime
