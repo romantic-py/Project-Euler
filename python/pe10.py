@@ -14,9 +14,11 @@ def check_primality(n, int_root):
 def extend_prime_list(upto_number = 2 * 10 ** 6):
     n = 11
     last_int_root = 4
+    last_int = 16  # last_int = last_int_root ** 2
     while n < upto_number:
-        if last_int_root * last_int_root <= n:
+        if last_int <= n:
             last_int_root += 1
+            last_int += 2 * last_int_root - 1
         if check_primality(n, last_int_root):
             primes.append(n)
         n += 2
