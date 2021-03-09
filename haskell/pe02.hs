@@ -1,3 +1,4 @@
+make_fibonacci_n :: [Int] -> Int -> [Int]
 make_fibonacci_n fib n  -- generates the list of fibonacci numbers till the first such number >= n
     | head fib > n = fib
     | otherwise = make_fibonacci_n (sum(take 2 fib) : fib) n
